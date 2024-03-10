@@ -2,13 +2,13 @@ import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id ("kotlin-kapt")
-    id ("dagger.hilt.android.plugin")
+//    id ("kotlin-kapt")
+//    id ("dagger.hilt.android.plugin")
 }
 
 android {
     namespace = "com.example.bookline"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.bookline"
@@ -71,13 +71,27 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     //dager
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+//    implementation("com.google.dagger:hilt-android:2.44")
+//    kapt("com.google.dagger:hilt-android-compiler:2.44")
 
     //Navigation
     implementation ("androidx.navigation:navigation-compose:2.5.3")
+
+    // Maps
+    implementation("com.google.maps.android:maps-compose:2.7.2")
+    implementation("com.google.android.gms:play-services-maps:18.1.0")
+
+    // Calendar
+    implementation("com.kizitonwose.calendar:compose:2.0.4")
+    // Test Dependencies
+    testImplementation ("junit:junit:4.13.2")
+    androidTestImplementation ("androidx.test.ext:junit:1.1.4")
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.0")
+    androidTestImplementation ("androidx.compose.ui:ui-test-junit4:1.3.1")
+    debugImplementation ("androidx.compose.ui:ui-tooling:1.3.1")
+    debugImplementation ("androidx.compose.ui:ui-test-manifest:1.3.1")
 }
 // Allow references to generated code
-kapt {
-    correctErrorTypes = true
-}
+//kapt {
+//    correctErrorTypes = true
+//}
