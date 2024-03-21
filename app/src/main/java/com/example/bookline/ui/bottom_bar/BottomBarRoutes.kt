@@ -33,8 +33,8 @@ sealed class BottomBarRoutes(
     object Food_screen: BottomBarRoutes(
             route = "RestaurantScreen",
             title = "Restaurant",
-            icon = R.drawable.food,
-            icon_focused = R.drawable.food
+            icon = R.drawable.restaurant,
+            icon_focused = R.drawable.restaurant
     )
 
     object Clinic_screen: BottomBarRoutes(

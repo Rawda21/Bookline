@@ -15,7 +15,6 @@ import com.example.bookline.ui.taxi.TaxiScreen
 fun MainNavigation(
     navHostController: NavHostController
 ) {
-
     NavHost(navController = navHostController, startDestination = BottomBarRoutes.Home_screen.route) {
         composable(BottomBarRoutes.Home_screen.route) {
             HomeScreen()

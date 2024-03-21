@@ -1,15 +1,43 @@
 <resources>
+    <string name="cd_navigate_up">navigate up</string>
+    <string name="sign_up">Sign up</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_in_with_password">Sign in with password</string>
+    <string name="or">or</string>
+    <string name="authentication_heading">Let\'s you in</string>
+    <string name="remember_me">Remember me</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forgot_the_password">Forgot the password?</string>
+    <string name="sign_in_screen_heading">Login to your \nAccount</string>
+    <string name="or_continue_with">or continue with</string>
+    <string name="sign_up_screen_heading">Create your\nAccount</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="cd_profile_icon">profile icon</string>
+    <string name="username_input_field_placeholder">Username</string>
+    <string name="passwrord_input_field_placeholder">Password</string>
+    <string name="cd_password_icon">password icon</string>
+    <string name="email_input_field_placeholder">Email</string>
+    <string name="cd_email_icon">email icon</string>
+    <string name="sign_in_screen_invalid_email">Invalid email</string>
+    <string name="welcome_screen_title">Welcome to 👋</string>
+    <string name="welcome_screen_subtitle">The best app for booking in this century to accompany your vacation</string>
+    <!--App Buttons-->
     <string name="app_name">Bookline</string>
     <string name="FOOD">Looking For A restaurant</string>
     <string name="search">Search</string>
     <string name="menu">Menu</string>
-    <string name="profile">Profile</string>
-    <string name="hi">Hi! User</string>
-    <string name="welcome">Welcome</string>
-    <string name="my_ticket">My tickets</string>
-    <string name="my_credit_card">My credit cards</string>
-    <string name="history">History</string>
-    <string name="change_city">Changes city</string>
-    <string name="about_us">About us</string>
-    <string name="logout">Logout</string>
+    <string name="button_login_label">Login</string>
+    <string name="button_signup_label">Sign Up</string>
+    <string name="carousel_button_next">Next</string>
+    <string name="carousel_button_skip">Skip</string>
+
+    <!--App TextFields-->
+
+    <!--App Labels-->
+    <string name="label_travel_with_no_worry">Travel With No Worry</string>
+    <string name="label_travel_with_no_worry_description">It makes your visit to Egypt easy by allowing you to book essential services easily.</string>
+    <string name="label_find_hundreds_hotels">Find hotels, restaurants, clinics and taxis </string>
+    <string name="label_find_hundreds_hotels_description">Discover hotels, restaurants, clinics and taxis quickly for you</string>
+    <string name="label_discover_the_world">Let’s discover Egypt</string>
+    <string name="label_discover_the_world_description">Enjoy your trip!</string>
 </resources>

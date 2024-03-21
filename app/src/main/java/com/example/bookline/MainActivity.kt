@@ -5,6 +5,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -15,6 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.example.bookline.ui.bottom_bar.BottomBar
+import com.example.bookline.ui.hello.welcome.WelcomeScreen
+import com.example.bookline.ui.hello.welcome.carousel.CarouselNavigation
+import com.example.bookline.ui.hello.welcome.carousel.CarouselScreenViewModel
 import com.example.bookline.ui.home.HomeScreen
 import com.example.bookline.ui.navigation.MainNavigation
 import com.example.bookline.ui.theme.BooklineTheme
@@ -30,10 +37,10 @@ class MainActivity : ComponentActivity() {
                 Surface{
                     Scaffold(
                             bottomBar = {
-                                BottomBar(navController = navHostController)
+                               BottomBar(navController = navHostController)
                             }
                     ) {
-                        MainNavigation(navHostController = navHostController)
+                       MainNavigation(navHostController = navHostController)
                     }
                 }
             }

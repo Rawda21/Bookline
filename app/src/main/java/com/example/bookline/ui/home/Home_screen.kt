@@ -1,11 +1,8 @@
 package com.example.bookline.ui.home
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.Arrangement.SpaceBetween
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -13,7 +10,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -23,11 +19,11 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.bookline.design.Navbar
 
-@Preview
+
 @Composable
 fun HomeScreen() {
 
@@ -47,17 +43,8 @@ fun HomeScreen() {
                         .fillMaxSize()
                         .padding(start = 20.dp, end = 20.dp, top = 40.dp)
             ) {
+                LogoIcon()
                 Promotions()
-//                Row(
-//                        modifier = Modifier.fillMaxWidth(),
-//                        horizontalArrangement = SpaceBetween
-//                ) {
-//                    options.forEach {
-//                        SelectOptions(title = it, selected = it == selected) {
-//                            selected = it
-//                        }
-//                    }
-//                }
 
                 LazyRow {
                     items(moviesList) {
@@ -107,61 +94,22 @@ fun Promotions() {
             shape = RoundedCornerShape(20.dp),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = 20.dp).
-                background(Color.Transparent)
+                .background(Color.Transparent)
     ) {
         Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color.Blue), contentAlignment = Center
+                    .background(Color.White)
         ) {
             Row(
-                    modifier = Modifier.padding(vertical = 10.dp)
+                    modifier = Modifier.padding(vertical = 2.dp)
             ) {
 
                 Text(text = "Bookline",
                      style = TextStyle(fontSize = 40.sp,
                                        fontFamily = FontFamily.Serif),
-                     color = Color.White)
+                     color = Color.Blue)
             }
         }
     }
 }
-
-//@Composable
-//fun SelectOptions(
-//    title: String,
-//    selected: Boolean,
-//    onValueChange: (String) -> Unit
-//) {
-//
-//    Card(
-//            shape = RoundedCornerShape(18.27.dp),
-//            border = if (selected) BorderStroke(2.74.dp, Color.Blue) else
-//                BorderStroke(
-//                        0.dp,
-//                        Color.Transparent
-//                ),
-//            modifier = Modifier
-//                .width(155.dp)
-//                .height(56.dp).
-//                background(Color.Transparent)
-//    ) {
-//        Box(
-//                modifier = Modifier
-//                    .background(Color.White)
-//                    .clickable {onValueChange(title)},
-//                contentAlignment = Center
-//        ) {
-//            Text(
-//                    text = title,
-//                    style = TextStyle(
-//                            color = if (selected) Color.Blue else Color.Blue,
-//                            fontSize = if (selected) 19.67.sp else 18.55.sp,
-//                            fontWeight = if (selected) FontWeight.W700 else FontWeight.W300,
-//                            fontFamily = FontFamily.SansSerif
-//                    )
-//            )
-//        }
-//    }
-//}
