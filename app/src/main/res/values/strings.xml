@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Bookline</string>
     <string name="FOOD">Looking For A restaurant</string>
+    <string name="header">BOOK A Hotel Room</string>
+    <string name="reco">recommended</string>
     <string name="search">Search</string>
-    <string name="menu">Menu</string>
+    <string name="menu">Restaurant</string>
     <string name="profile">Profile</string>
     <string name="hi">Hi! User</string>
     <string name="welcome">Welcome</string>
@@ -12,4 +14,7 @@
     <string name="change_city">Changes city</string>
     <string name="about_us">About us</string>
     <string name="logout">Logout</string>
+    <string name="hotel_category_popular">Popular</string>
+    <string name="hotel_category_recommended">Recommended</string>
+    <string name="hotel_category_trending">Trending</string>
 </resources>

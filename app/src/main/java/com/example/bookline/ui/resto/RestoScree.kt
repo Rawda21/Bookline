@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,6 +19,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -65,19 +67,22 @@ fun FoodScreen() {
             Column {
                 FoodHeader()
                 FoodMenu(text = search, onValueChange = { search = it })
-                Row(modifier = Modifier.padding(start = 30.dp)) {
-                    menuList.forEach {
-                        CustomFoodChip(title = it, selected = it == currentMenuState) {
-                            currentMenuState = it
-                        }
+                Row(modifier = Modifier.padding(start = 20.dp)) {
+                    Button(onClick = {  }) {
+                        Text(text = "Recommended")
                     }
-                }
-                LazyColumn {
-                    items(foodList, key = { it.id }) {
-                        ShowFood(food = it)
+                    Spacer(modifier = Modifier.padding(3.dp))
+                    Button(onClick = { }) {
+                        Text(text = "Popular")
                     }
-                    item { }
+                    Spacer(modifier = Modifier.padding(3.dp))
+                    Button(onClick = { }) {
+                        Text(text = "Trending")
+
+                    }
+
                 }
+                showrestaurant()
             }
 
         }
@@ -92,7 +97,7 @@ fun ShowFood(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(
-                        top = 15.dp, end = 30.dp, start = 30.dp
+                    top = 15.dp, end = 30.dp, start = 30.dp
                 )
                 .clip(RoundedCornerShape(13.dp))
                 .background(Color.White)
@@ -169,8 +174,9 @@ fun CustomFoodChip(
 //                    background = if (selected) Color.Blue else Color.LightGray
 //            ),
             shape = RoundedCornerShape(40.dp),
-            modifier = Modifier.padding(end = 10.dp).
-            background(if (selected) Color.Blue else Color.LightGray)
+            modifier = Modifier
+                .padding(end = 10.dp)
+                .background(if (selected) Color.Blue else Color.LightGray)
     ) {
         Text(
                 text = title, style = TextStyle(
@@ -220,8 +226,9 @@ fun CustomSearchView(
                 value = text, onValueChange = {
             onValueChange(it)
         },
-                modifier = Modifier.fillMaxWidth().
-                background(color = Color.Blue),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(color = Color.Blue),
                 colors = TextFieldDefaults.textFieldColors(
                         focusedIndicatorColor = Color.Transparent,
                         unfocusedIndicatorColor = Color.Transparent,
