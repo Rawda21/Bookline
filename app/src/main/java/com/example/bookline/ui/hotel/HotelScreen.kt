@@ -41,9 +41,11 @@ import com.example.bookline.ui.home.moviesList
 
 @Composable
 fun HotelScreen() {
-    lateinit var navController: NavHostController
-    navController = rememberNavController()
-   showhotelScreen(navController)
+    val navHostController = rememberNavController()
+    showhotelScreen(navController = navHostController)
+
+
+
 
 }
 @Composable
