@@ -2,6 +2,7 @@ package com.example.bookline.ui.hotel
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -10,7 +11,7 @@ import androidx.navigation.navArgument
 import com.example.bookline.R
 
 @Composable
-fun showhotelPopular(navController : NavController) {
+fun showhotelPopular(navController: NavHostController) {
     run {
         val imageId = arrayOf(
             R.drawable.hotel1,
@@ -22,11 +23,11 @@ fun showhotelPopular(navController : NavController) {
         )
 
         val names = arrayOf(
+            "Sunrise",
             "Helton",
             "Almasa",
             "Rixsos",
             "Safari",
-            "Sunrise",
             "Ebrotel"
         )
 

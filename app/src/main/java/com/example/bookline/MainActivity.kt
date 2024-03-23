@@ -17,6 +17,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.bookline.ui.bottom_bar.BottomBar
 import com.example.bookline.ui.home.HomeScreen
+import com.example.bookline.ui.hotel.setupNavgraph
 import com.example.bookline.ui.navigation.MainNavigation
 import com.example.bookline.ui.theme.BooklineTheme
 
@@ -29,6 +30,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             BooklineTheme {
                 val navHostController = rememberNavController()
+
                 Surface{
                     Scaffold(
                             bottomBar = {
@@ -36,6 +38,7 @@ class MainActivity : ComponentActivity() {
                             }
                     ) {
                         MainNavigation(navHostController = navHostController)
+
                     }
                 }
             }

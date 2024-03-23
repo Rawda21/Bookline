@@ -9,12 +9,15 @@ import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun setupNavgraph(navController: NavHostController){
-    NavHost(navController = navController, startDestination = Screen.popular.route ){
+    NavHost(navController = navController, startDestination = "home" ){
+        composable(route = Screen.home.route){
+            showhotelScreen(navController = navController)
+        }
         composable(route = Screen.popular.route){
-            showhotelPopular(navController)
+            showhotelPopular(navController = navController)
         }
         composable(route = Screen.recomended.route){
-            showhotelrecomended( navController)
+            showhotelrecomended(navController=navController)
         }
     }
 }

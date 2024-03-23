@@ -8,6 +8,9 @@ import com.example.bookline.ui.bottom_bar.BottomBarRoutes
 import com.example.bookline.ui.clinic.ClinicScreen
 import com.example.bookline.ui.home.HomeScreen
 import com.example.bookline.ui.hotel.HotelScreen
+import com.example.bookline.ui.hotel.Screen
+import com.example.bookline.ui.hotel.showhotelPopular
+import com.example.bookline.ui.hotel.showhotelrecomended
 import com.example.bookline.ui.resto.FoodScreen
 import com.example.bookline.ui.taxi.TaxiScreen
 
@@ -32,6 +35,7 @@ fun MainNavigation(
         composable(BottomBarRoutes.Clinic_screen.route) {
             ClinicScreen()
         }
+
     }
 
 }

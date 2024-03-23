@@ -38,49 +38,13 @@ import com.example.bookline.R
 import com.example.bookline.ui.home.Movies
 import com.example.bookline.ui.home.moviesList
 
-@Preview
+
 @Composable
 fun HotelScreen() {
     lateinit var navController: NavHostController
     navController = rememberNavController()
-    var search by remember { mutableStateOf("") }
+   showhotelScreen(navController)
 
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.White)
-    ) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.White)
-        ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-
-            ) {
-                HotelMenu(text = search, onValueChange = { search = it })
-                Row(modifier = Modifier.padding(start = 20.dp)) {
-                    Button(onClick = {  }) {
-                        Text(text = "Recommended")
-                    }
-                    Spacer(modifier = Modifier.padding(3.dp))
-                    Button(onClick = { }) {
-                        Text(text = "Popular")
-                    }
-                    Spacer(modifier = Modifier.padding(3.dp))
-                    Button(onClick = { }) {
-                        Text(text = "Trending")
-
-                    }
-
-                }
-
-                showhotel()
-            }
-        }
-    }
 }
 @Composable
 fun HotelMenu(
@@ -195,8 +159,5 @@ fun showhotel() {
 
     }
 }
-@Composable
-fun nav(){
-    lateinit var navController: NavHostController
-   navController = rememberNavController()
-}
+
+
