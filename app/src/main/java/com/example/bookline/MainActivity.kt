@@ -31,6 +31,7 @@ class MainActivity : ComponentActivity() {
             BooklineTheme {
                 val navHostController = rememberNavController()
 
+
                 Surface{
                     Scaffold(
                             bottomBar = {

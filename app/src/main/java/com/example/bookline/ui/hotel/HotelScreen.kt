@@ -35,16 +35,51 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.bookline.R
+import com.example.bookline.ui.clinic.ClinicMenu
+import com.example.bookline.ui.clinic.showclinics
 import com.example.bookline.ui.home.Movies
 import com.example.bookline.ui.home.moviesList
+import com.example.bookline.ui.resto.FoodHeader
 
-
+@Preview
 @Composable
 fun HotelScreen() {
-    val navHostController = rememberNavController()
-    showhotelScreen(navController = navHostController)
+    var search by remember { mutableStateOf("") }
+    Box(
+        modifier = Modifier.padding(bottom = 60.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.White)
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+            ) {
 
+                HotelMenu(text = search, onValueChange = { search = it })
+                Row(modifier = Modifier.padding(start = 20.dp)) {
+                    Button(onClick = {  }) {
+                        Text(text = "Recommended")
+                    }
+                    Spacer(modifier = Modifier.padding(3.dp))
+                    Button(onClick = { }) {
+                        Text(text = "Popular")
+                    }
+                    Spacer(modifier = Modifier.padding(3.dp))
+                    Button(onClick = { }) {
+                        Text(text = "Trending")
 
+                    }
+
+                }
+                Spacer(modifier = Modifier.padding(2.dp))
+                showhotel()
+            }
+
+        }
+    }
 
 
 }
